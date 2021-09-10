@@ -6,38 +6,28 @@
     <meta name="description" content="Official Cinematheque Blog" />
     <meta name="keywords" content="films, blog, cinematheque" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/main.css" />
   </head>
-  <body
-    link="#5c5c8a"
-    alink="#8585ad"
-    vlink="#33334d"
-    style="background-color: #fff3a8; font-size: 18px"
-  >
-    <div style="min-height: calc(100vh - 70px)">
+  <body link="#5c5c8a" alink="#8585ad" vlink="#33334d">
+    <div>
       <header>
-        <span
-          style="
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-          "
-        >
-          <h2 style="margin: 1rem">
+        <span class="nav-bar">
+          <h2 id="big-logo">
             <a href="index.html">Cinematheque blog</a>
           </h2>
-          <h3 style="margin: 0.5rem; padding-top: 0.6rem">
+          <h3 class="btn-small">
             <a href="films.html">Films</a>
           </h3>
-          <h3 style="margin: 0.5rem; padding-top: 0.6rem">
+          <h3 class="btn-small">
             <a href="directors.html">Directors</a>
           </h3>
-          <h3 style="margin: 0.5rem; padding-top: 0.6rem">
+          <h3 class="btn-small">
             <a href="genres.html">Genres</a>
           </h3>
         </span>
       </header>
-      <section style="padding-left: 3rem; padding-right: 3rem">
+      <section class="main-section">
         <h3>Genres</h3>
         <p>
           One of the few rare things that one can actually learn in film school
@@ -125,48 +115,18 @@
         <br />
 
         <p>Let's have a deeper look at film genres and their subgenres:</p>
-        <table
-          style="
-            border: 1px solid #2b2b2b;
-            margin: 2rem;
-            padding: 0.8rem;
-            border-collapse: collapse;
-            width: 100%;
-            table-layout: fixed;
-            border-spacing: 20px;
-          "
-        >
+        <table class="basic-table big-table">
           <colgroup>
-            <col span="2" style="background-color: khaki" />
-            <col style="background-color: lightgoldenrodyellow" />
+            <col span="2" class="darker-col" />
+            <col class="lighter-col" />
           </colgroup>
-          <tr style="background-color: #2b2b2b; color: white">
-            <th
-              colspan="2"
-              style="
-                border: 2px solid white;
-                padding: 0.5rem;
-                width: 600px;
-                text-align: center;
-              "
-            >
-              Genre and Subgenres
-            </th>
-            <th style="border: 2px solid white; padding: 0.5rem">
-              Description
-            </th>
+          <tr class="tr-colored">
+            <th colspan="2" id="wide-th">Genre and Subgenres</th>
+            <th>Description</th>
           </tr>
           <tr>
-            <td
-              style="
-                border: 1px solid #2b2b2b;
-                padding: 0.5rem;
-                text-align: center;
-              "
-            >
-              Action film
-            </td>
-            <td style="border: 1px solid #2b2b2b; padding: 0.5rem">
+            <td class="centered-td">Action film</td>
+            <td>
               <ul>
                 <li>Disaster film</li>
                 <li>
@@ -184,32 +144,20 @@
                 <li>Superhero film</li>
               </ul>
             </td>
-            <td
-              style="border: 1px solid #2b2b2b; padding: 0.5rem; padding: 20px"
-            >
+            <td>
               Associated with particular types of spectacle (e.g., explosions,
               chases, combat)
             </td>
           </tr>
           <tr>
-            <td
-              style="
-                border: 1px solid #2b2b2b;
-                padding: 0.5rem;
-                text-align: center;
-              "
-            >
-              Adventure film
-            </td>
-            <td style="border: 1px solid #2b2b2b; padding: 0.5rem">
+            <td class="centered-td">Adventure film</td>
+            <td>
               <ul>
                 <li>Pirate film</li>
                 <li>Swashbuckler film</li>
               </ul>
             </td>
-            <td
-              style="border: 1px solid #2b2b2b; padding: 0.5rem; padding: 20px"
-            >
+            <td>
               Implies a narrative that is defined by a journey (often including
               some form of pursuit) and is usually located within a fantasy or
               exoticized setting. Typically, though not always, such stories
@@ -218,17 +166,9 @@
               two genres.
             </td>
           </tr>
-          <tr style="font-size: 18px">
-            <td
-              style="
-                border: 1px solid #2b2b2b;
-                padding: 0.5rem;
-                text-align: center;
-              "
-            >
-              Animated film
-            </td>
-            <td style="border: 1px solid #2b2b2b; padding: 0.5rem">
+          <tr>
+            <td class="centered-td">Animated film</td>
+            <td>
               <ul>
                 <li>CGI animation</li>
                 <li>Cutout animation</li>
@@ -239,26 +179,16 @@
               </ul>
             </td>
 
-            <td
-              style="border: 1px solid #2b2b2b; padding: 0.5rem; padding: 20px"
-            >
+            <td>
               A film medium in which the film’s images are primarily created by
               computer or hand and the characters are voiced by actors.
               Animation can otherwise incorporate any genre and subgenre and is
               often confused as a genre itself.
             </td>
           </tr>
-          <tr style="font-size: 18px">
-            <td
-              style="
-                border: 1px solid #2b2b2b;
-                padding: 0.5rem;
-                text-align: center;
-              "
-            >
-              Comedy film
-            </td>
-            <td style="border: 1px solid #2b2b2b; padding: 0.5rem">
+          <tr>
+            <td class="centered-td">Comedy film</td>
+            <td>
               <ul>
                 <li>Action-comedy film</li>
                 <li>Buddy comedy</li>
@@ -269,24 +199,14 @@
                 <li>Slapstick film</li>
               </ul>
             </td>
-            <td
-              style="border: 1px solid #2b2b2b; padding: 0.5rem; padding: 20px"
-            >
+            <td>
               Defined by events that are primarily intended to make the audience
               laugh
             </td>
           </tr>
-          <tr style="font-size: 18px">
-            <td
-              style="
-                border: 1px solid #2b2b2b;
-                padding: 0.5rem;
-                text-align: center;
-              "
-            >
-              Drama
-            </td>
-            <td style="border: 1px solid #2b2b2b; padding: 0.5rem">
+          <tr>
+            <td class="centered-td">Drama</td>
+            <td>
               <ul>
                 <li>Legal drama</li>
                 <li>Medical drama</li>
@@ -297,24 +217,14 @@
               </ul>
             </td>
 
-            <td
-              style="border: 1px solid #2b2b2b; padding: 0.5rem; padding: 20px"
-            >
+            <td>
               Focused on emotions and defined by conflict, often looking to
               reality rather than sensationalism.
             </td>
           </tr>
-          <tr style="font-size: 18px">
-            <td
-              style="
-                border: 1px solid #2b2b2b;
-                padding: 0.5rem;
-                text-align: center;
-              "
-            >
-              Fantasy film
-            </td>
-            <td style="border: 1px solid #2b2b2b; padding: 0.5rem">
+          <tr>
+            <td class="centered-td">Fantasy film</td>
+            <td>
               <ul>
                 <li>Contemporary fantasy</li>
                 <li>Dark fantasy</li>
@@ -323,9 +233,7 @@
               </ul>
             </td>
 
-            <td
-              style="border: 1px solid #2b2b2b; padding: 0.5rem; padding: 20px"
-            >
+            <td>
               Films defined by situations that transcend natural laws and/or by
               settings inside a fictional universe, with narratives that are
               often inspired by or involve human myths. The genre typically
@@ -333,17 +241,9 @@
               creatures, and supernatural elements
             </td>
           </tr>
-          <tr style="font-size: 18px">
-            <td
-              style="
-                border: 1px solid #2b2b2b;
-                padding: 0.5rem;
-                text-align: center;
-              "
-            >
-              Historical film
-            </td>
-            <td style="border: 1px solid #2b2b2b; padding: 0.5rem">
+          <tr>
+            <td class="centered-td">Historical film</td>
+            <td>
               <ul>
                 <li>Alternate history</li>
                 <li>Biopic</li>
@@ -354,25 +254,15 @@
               </ul>
             </td>
 
-            <td
-              style="border: 1px solid #2b2b2b; padding: 0.5rem; padding: 20px"
-            >
+            <td>
               Films that either provide more-or-less accurate representations of
               historical accounts or depict fictional narratives placed inside
               an accurate depiction of a historical setting.
             </td>
           </tr>
-          <tr style="font-size: 18px">
-            <td
-              style="
-                border: 1px solid #2b2b2b;
-                padding: 0.5rem;
-                text-align: center;
-              "
-            >
-              Horror film
-            </td>
-            <td style="border: 1px solid #2b2b2b; padding: 0.5rem">
+          <tr>
+            <td class="centered-td">Horror film</td>
+            <td>
               <ul>
                 <li>Found footage</li>
                 <li>Ghost films</li>
@@ -384,34 +274,15 @@
                 <li>Zombie film</li>
               </ul>
             </td>
-            <td
-              rowspan="2"
-              style="border: 1px solid #2b2b2b; padding: 0.5rem"
-            ></td>
+            <td rowspan="2"></td>
           </tr>
-          <tr style="font-size: 18px">
-            <td
-              style="
-                border: 1px solid #2b2b2b;
-                padding: 0.5rem;
-                text-align: center;
-              "
-            >
-              Mystery film
-            </td>
-            <td style="border: 1px solid #2b2b2b; padding: 0.5rem"></td>
+          <tr>
+            <td class="centered-td">Mystery film</td>
+            <td></td>
           </tr>
-          <tr style="font-size: 18px">
-            <td
-              style="
-                border: 1px solid #2b2b2b;
-                padding: 0.5rem;
-                text-align: center;
-              "
-            >
-              Science fiction film
-            </td>
-            <td style="border: 1px solid #2b2b2b; padding: 0.5rem">
+          <tr>
+            <td class="centered-td">Science fiction film</td>
+            <td>
               <ul>
                 <li>Dystopian film</li>
                 <li>Post-apocalyptic film</li>
@@ -423,9 +294,7 @@
               </ul>
             </td>
 
-            <td
-              style="border: 1px solid #2b2b2b; padding: 0.5rem; padding: 20px"
-            >
+            <td>
               Films are defined by a combination of imaginative speculation and
               a scientific or technological premise, making use of the changes
               and trajectory of technology and science. This genre often
@@ -433,45 +302,27 @@
               observable science.
             </td>
           </tr>
-          <tr style="font-size: 18px">
-            <td
-              style="
-                border: 1px solid #2b2b2b;
-                padding: 0.5rem;
-                text-align: center;
-              "
-            >
-              Thriller film
-            </td>
-            <td style="border: 1px solid #2b2b2b; padding: 0.5rem">
+          <tr>
+            <td class="centered-td">Thriller film</td>
+            <td>
               <ul>
                 <li>Psychological thriller</li>
                 <li>Mystery film</li>
                 <li>Techno-thriller</li>
               </ul>
             </td>
-            <td style="border: 1px solid #2b2b2b; padding: 0.5rem"></td>
+            <td></td>
           </tr>
-          <tr style="font-size: 18px">
-            <td
-              style="
-                border: 1px solid #2b2b2b;
-                padding: 0.5rem;
-                text-align: center;
-              "
-            >
-              Western
-            </td>
-            <td style="border: 1px solid #2b2b2b; padding: 0.5rem">
+          <tr>
+            <td class="centered-td">Western</td>
+            <td>
               <ul>
                 <li>Epic Western</li>
                 <li>Revisionist Western</li>
                 <li>Spaghetti Western</li>
               </ul>
             </td>
-            <td
-              style="border: 1px solid #2b2b2b; padding: 0.5rem; padding: 20px"
-            >
+            <td>
               A genre in which films are set in the American West during the
               19th century and embodies the "spirit, the struggle and the demise
               of the new frontier." These films will often feature horse riding,
@@ -484,16 +335,7 @@
       </section>
     </div>
 
-    <footer
-      style="
-        height: 50px;
-        width: 100%;
-        padding-top: 0.1rem;
-        padding-left: 4rem;
-        background-color: #2b2b2b;
-        color: white;
-      "
-    >
+    <footer>
       <h6>2021 Cinematheque</h6>
     </footer>
   </body>

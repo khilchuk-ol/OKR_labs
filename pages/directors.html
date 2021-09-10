@@ -6,38 +6,33 @@
     <meta name="description" content="Official Cinematheque Blog" />
     <meta name="keywords" content="films, blog, cinematheque" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/main.css" />
   </head>
   <body
     link="#5c5c8a"
     alink="#8585ad"
     vlink="#33334d"
-    style="background-color: #fff3a8; font-size: 18px"
+    style="background-color: burlywood"
   >
-    <div style="min-height: calc(100vh - 70px)">
+    <div>
       <header>
-        <span
-          style="
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-          "
-        >
-          <h2 style="margin: 1rem">
+        <span class="nav-bar">
+          <h2 id="big-logo">
             <a href="index.html">Cinematheque blog</a>
           </h2>
-          <h3 style="margin: 0.5rem; padding-top: 0.6rem">
+          <h3 class="btn-small">
             <a href="films.html">Films</a>
           </h3>
-          <h3 style="margin: 0.5rem; padding-top: 0.6rem">
+          <h3 class="btn-small">
             <a href="directors.html">Directors</a>
           </h3>
-          <h3 style="margin: 0.5rem; padding-top: 0.6rem">
+          <h3 class="btn-small">
             <a href="genres.html">Genres</a>
           </h3>
         </span>
       </header>
-      <section style="padding-left: 3rem; padding-right: 3rem">
+      <section class="main-section">
         <h3>Directors</h3>
         <p>
           Like a stage director, a movie director tells the actors how to play a
@@ -99,20 +94,12 @@
           </li>
         </ul>
 
-        <span
-          style="
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            padding-bottom: 2rem;
-          "
-        >
+        <span class="simple-galery">
           <a href="../imgs//directors/david-lynch.jpg" target="_blank">
             <img
               src="../imgs//directors/david-lynch.jpg"
               width="auto"
               height="600"
-              style="padding-right: 1rem; float: left"
               alt="David Lynch"
             />
           </a>
@@ -121,23 +108,13 @@
               src="../imgs//directors/tarantino.jpg"
               width="auto"
               height="600"
-              style="padding-right: 1rem; float: left"
               alt="Quentin Tarantino"
             /> </a
         ></span>
       </section>
     </div>
 
-    <footer
-      style="
-        height: 50px;
-        width: 100%;
-        padding-top: 0.1rem;
-        padding-left: 4rem;
-        background-color: #2b2b2b;
-        color: white;
-      "
-    >
+    <footer>
       <h6>2021 Cinematheque</h6>
     </footer>
   </body>

@@ -6,44 +6,35 @@
     <meta name="description" content="Official Cinematheque Blog" />
     <meta name="keywords" content="films, blog, cinematheque" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/main.css" />
   </head>
-  <body
-    link="#5c5c8a"
-    alink="#8585ad"
-    vlink="#33334d"
-    style="background-color: #fff3a8; font-size: 18px"
-  >
-    <div style="min-height: calc(100vh - 70px)">
+  <body link="#5c5c8a" alink="#8585ad" vlink="#33334d">
+    <div>
       <header>
-        <span
-          style="
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-          "
-        >
-          <h2 style="margin: 1rem">
+        <span class="nav-bar">
+          <h2 id="big-logo">
             <a href="index.html">Cinematheque blog</a>
           </h2>
-          <h3 style="margin: 0.5rem; padding-top: 0.6rem">
+          <h3 class="btn-small">
             <a href="films.html">Films</a>
           </h3>
-          <h3 style="margin: 0.5rem; padding-top: 0.6rem">
+          <h3 class="btn-small">
             <a href="directors.html">Directors</a>
           </h3>
-          <h3 style="margin: 0.5rem; padding-top: 0.6rem">
+          <h3 class="btn-small">
             <a href="genres.html">Genres</a>
           </h3>
         </span>
       </header>
       <section
+        class="main-section"
         style="
           padding: 3rem;
           background-image: url('../imgs/background/mank-gary-oldman_.jpg');
         "
       >
-        <div style="color: rgba(0, 0, 0, 1)">
+        <div>
           <h3>Cinemathography</h3>
           <p>
             Cinematography, the art and technology of motion-picture
@@ -53,14 +44,7 @@
             movements; and the integration of any special effects.
           </p>
 
-          <p
-            style="
-              font-family: Arial, Helvetica, sans-serif;
-              font-size: 20px;
-              font-style: italic;
-              text-align: center;
-            "
-          >
+          <p class="quoted-text">
             Telling a story on film isn’t just about recording the action. It’s
             also about how the images are captured. In the film and television
             world, this is known as cinematography.
@@ -94,14 +78,7 @@
             best cinematography and allows members to put “ASC” after their name
             in credits.
           </p>
-          <p
-            style="
-              font-family: Arial, Helvetica, sans-serif;
-              font-size: 15px;
-              font-style: italic;
-              text-decoration: underline;
-            "
-          >
+          <p class="underlined-text">
             Cinemathography has developed a lot of thechniques, some of them are
             listed <a href="#cinemathography-techniques">here</a>
           </p>
@@ -166,32 +143,15 @@
       </section>
 
       <br />
-      <section style="padding: 0 5rem 2rem 5rem">
+      <section class="latest-section">
         <h3>Latest posts:</h3>
-        <div
-          style="
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-content: flex-start;
-          "
-        >
+        <span class="nav-bar">
           <a href="post1.html">How much does making a film cost?</a>
-        </div>
+        </span>
       </section>
     </div>
 
-    <footer
-      style="
-        margin-top: 0.3rem;
-        height: 50px;
-        width: 100%;
-        padding-top: 0.1rem;
-        padding-left: 4rem;
-        background-color: #2b2b2b;
-        color: white;
-      "
-    >
+    <footer>
       <h6>2021 Cinematheque</h6>
     </footer>
   </body>

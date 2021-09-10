@@ -6,38 +6,32 @@
     <meta name="description" content="Official Cinematheque Blog" />
     <meta name="keywords" content="films, blog, cinematheque" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/main.css" />
   </head>
   <body
     link="#5c5c8a"
     alink="#8585ad"
     vlink="#33334d"
-    style="background-color: #fff3a8; font-size: 18px"
   >
     <div style="min-height: calc(100vh - 70px)">
       <header>
-        <span
-          style="
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-          "
-        >
-          <h2 style="margin: 1rem">
+        <span class="nav-bar">
+          <h2 id="big-logo">
             <a href="index.html">Cinematheque blog</a>
           </h2>
-          <h3 style="margin: 0.5rem; padding-top: 0.6rem">
+          <h3 class="btn-small">
             <a href="films.html">Films</a>
           </h3>
-          <h3 style="margin: 0.5rem; padding-top: 0.6rem">
+          <h3 class="btn-small">
             <a href="directors.html">Directors</a>
           </h3>
-          <h3 style="margin: 0.5rem; padding-top: 0.6rem">
+          <h3 class="btn-small">
             <a href="genres.html">Genres</a>
           </h3>
         </span>
       </header>
-      <section style="padding-left: 3rem; padding-right: 3rem">
+      <section class="main-section">
         <h3>How much does making a film cost?</h3>
 
         <p>
@@ -64,15 +58,7 @@
         <p>Let us show you a table of a budget for an average movie:</p>
         <br />
         <table
-          style="
-            border: 1px solid #2b2b2b;
-            margin: 2rem;
-            padding: 0.8rem;
-            border-collapse: collapse;
-            width: 95%;
-            table-layout: fixed;
-            border-spacing: 20px;
-          "
+          class="ver-brd-table"
         >
         <colgroup>
             <col span="2" style="background-color:lightgoldenrodyellow;">
@@ -80,15 +66,13 @@
             <col span="2" style="background-color: lightyellow;">
         </colgroup>
 
-          <tr style="border: inset black 1px; border-top: double; background-color: ivory;">
-            <th style="padding: 0.5rem; width: 100px; text-align: left">
-              Acct#
-            </th>
-            <th style="text-align: center">Category Description</th>
-            <th style="text-align: center; width: 100px">Page</th>
-            <th style="text-align: center; width: 100px">Orig</th>
-            <th style="text-align: center; width: 100px">Total</th>
-            <th style="text-align: center; width: 100px">Var</th>
+          <tr id="heading">
+            <th id="first-th">Acct#</th>
+            <th id="wide-th">Category Description</th>
+            <th>Page</th>
+            <th>Orig</th>
+            <th>Total</th>
+            <th>Var</th>
           </tr>
           <tr>
             <td
