@@ -211,3 +211,7 @@ dl {
   background: bisque;
   padding: 1rem;
 }
+
+.img_with_caption + p {
+  font-style: italic;
+}
