@@ -33,6 +33,10 @@ a:hover {
   justify-content: flex-start;
 }
 
+.links-row a {
+  margin: 0 1rem;
+}
+
 .nav-bar .btn-small {
   margin: 0.5rem;
   padding-top: 1rem;
@@ -212,6 +216,79 @@ dl {
   padding: 1rem;
 }
 
-.img_with_caption + p {
+.img-with-caption + p {
   font-style: italic;
+}
+
+.wide-img-gallery {
+  position: absolute;
+  top: 500px;
+}
+
+.wide-img-gallery div {
+  display: inline-block;
+  margin: 1rem;
+}
+
+.wide-img-gallery img {
+  height: 350px;
+  width: auto;
+}
+
+a:link {
+  color: #5c5c8a;
+}
+
+a:visited {
+  color: #33334d;
+}
+
+a:active {
+  color: #8585ad;
+}
+
+.rounded-btn {
+  border-radius: 25px;
+  border-width: 0;
+  height: 2.4rem;
+  width: 7.5rem;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0.3rem;
+}
+
+.rounded-btn:hover {
+  filter: brightness(85%);
+}
+
+.rounded-btn:focus {
+  border: none;
+  outline: none;
+}
+
+header #right-group {
+  position: absolute;
+  right: 3rem;
+}
+
+.lighter-btn {
+  background-color: #f3f548;
+  color: #495057;
+}
+
+.darker-btn {
+  background-color: #495057;
+  color: #f8f991;
+}
+
+.img-with-caption + p::before {
+  content: "~~~~";
+}
+
+.img-with-caption + p::after {
+  content: "~~~~";
+}
+
+header > span:first-child {
+  font-size: 20px;
 }
