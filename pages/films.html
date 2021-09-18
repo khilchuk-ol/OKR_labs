@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="../styles/main.css" />
+
+    <script src="../js/filmScripts.js"></script>
   </head>
   <body>
     <div>
@@ -33,6 +35,15 @@
         </span>
       </header>
       <section class="main-section">
+        <script>
+          filmReco([
+            "Godfather",
+            "Shawshank redemption",
+            "The Dark knight",
+            "Dune",
+          ]);
+        </script>
+
         <h3>Films</h3>
         <p>
           Films are similar to novels or short stories in that they tell a
@@ -158,8 +169,9 @@
       </section>
     </div>
 
-    <footer>
+    <footer class="nav-bar">
       <h6>2021 Cinematheque</h6>
+      <p id="#dev-info" class="footer-item"></p>
     </footer>
   </body>
 </html>

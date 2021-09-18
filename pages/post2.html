@@ -93,8 +93,28 @@
       </section>
     </div>
 
-    <footer>
+    <footer class="nav-bar">
       <h6>2021 Cinematheque</h6>
+      <p id="#dev-info" class="footer-item"></p>
     </footer>
+
+    <script>
+      const msg =
+        "The movie is available in cinemas now!!! Don't miss the release. Would you like to buy a ticket?";
+      if (confirm(msg)) {
+        const city = prompt("Please, enter your city");
+
+        if (city.toLowerCase() === "kyiv") {
+          setTimeout(() => {
+            location.assign("https://multiplex.ua/movie/353437");
+          }, 3000);
+          alert("We found a cinema for you! Redirect in 3 sec...");
+        } else {
+          alert("Sorry, we could not find cinemas for your city :(");
+        }
+      } else {
+        alert("We hope you will still watch this movie!");
+      }
+    </script>
   </body>
 </html>
