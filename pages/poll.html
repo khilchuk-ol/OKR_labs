@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Log in</title>
+    <meta name="author" content="Khilchuk O." />
+    <meta name="description" content="Official Cinematheque Blog" />
+    <meta name="keywords" content="films, blog, cinematheque" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/main.css" />
+
+    <script src="../js/scripts.js"></script>
+  </head>
+  <body>
+    <div style="min-height: calc(100vh - 70px)">
+      <header>
+        <span class="nav-bar">
+          <h2 id="big-logo">
+            <a href="index.html">Cinematheque blog</a>
+          </h2>
+          <h3 class="btn-small">
+            <a href="films.html">Films</a>
+          </h3>
+          <h3 class="btn-small">
+            <a href="directors.html">Directors</a>
+          </h3>
+          <h3 class="btn-small">
+            <a href="genres.html">Genres</a>
+          </h3>
+
+          <div id="right-group">
+            <script>
+              generateRightHeaderGroup(
+                "right-group",
+                "auth/login.html",
+                "auth/signup.html"
+              );
+            </script>
+          </div>
+        </span>
+      </header>
+
+      <section class="main-section">
+        <h3>What are your favourite ganres?</h3>
+        <p>Help us collect data</p>
+
+        <div>
+          <input
+            type="checkbox"
+            name="drama"
+            id="drama"
+            data-poll-item="drama"
+          />
+          <label for="drama">Drama</label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            name="fantasy"
+            id="fantasy"
+            data-poll-item="fantasy"
+          />
+          <label for="fantasy">Fantasy</label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            name="action"
+            id="action"
+            data-poll-item="action"
+          />
+          <label for="action">Action</label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            name="comedy"
+            id="comedy"
+            data-poll-item="comedy"
+          />
+          <label for="comedy"> Comedy </label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            name="horror"
+            id="horror"
+            data-poll-item="horror"
+          />
+          <label for="horror">Horror</label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            name="mystery"
+            id="mystery"
+            data-poll-item="mystery"
+          />
+          <label for="mystery">Mystery</label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            name="romance"
+            id="romance"
+            data-poll-item="romance"
+          />
+          <label for="romance">Romance</label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            name="thriller"
+            id="thriller"
+            data-poll-item="thriller"
+          />
+          <label for="thriller">Thriller</label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            name="western"
+            id="western"
+            data-poll-item="western"
+          />
+          <label for="western">Western</label>
+        </div>
+
+        <input hidden id="count" value="0" />
+        <p id="res"></p>
+      </section>
+    </div>
+
+    <footer class="nav-bar">
+      <h6>2021 Cinematheque</h6>
+      <p id="#dev-info" class="footer-item"></p>
+    </footer>
+
+    <script>
+      document.addEventListener("click", (e) => {
+        const id = e.target.dataset.pollItem;
+        if (!id) return;
+
+        const count = document.getElementById("count");
+
+        if (document.getElementById(id).checked) {
+          document.getElementById("count").value++;
+        } else {
+          document.getElementById("count").value--;
+        }
+
+        document.getElementById("res").innerHTML = `You have selected ${
+          document.getElementById("count").value
+        } genre(s)`;
+      });
+    </script>
+  </body>
+</html>

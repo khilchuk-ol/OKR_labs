@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Log in</title>
+    <meta name="author" content="Khilchuk O." />
+    <meta name="description" content="Official Cinematheque Blog" />
+    <meta name="keywords" content="films, blog, cinematheque" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../styles/main.css" />
+
+    <script src="../../js/scripts.js"></script>
+
+    <script>
+      const loginHandler = (e) => {
+        const name = document.getElementById("name-input").value;
+        const password = document.getElementById("pwd-input").value;
+
+        if (!name || !password) {
+          alert("Cannot log in. Invalid input");
+          return;
+        }
+
+        const user = {
+          name,
+          password,
+        };
+
+        localStorage.setItem("user", JSON.stringify(user));
+
+        alert(`Successfully logged in as ${name}`);
+      };
+    </script>
+  </head>
+  <body>
+    <div style="min-height: calc(100vh - 70px)">
+      <header>
+        <span class="nav-bar">
+          <h2 id="big-logo">
+            <a href="../index.html">Cinematheque blog</a>
+          </h2>
+          <h3 class="btn-small">
+            <a href="../films.html">Films</a>
+          </h3>
+          <h3 class="btn-small">
+            <a href="../directors.html">Directors</a>
+          </h3>
+          <h3 class="btn-small">
+            <a href="../genres.html">Genres</a>
+          </h3>
+
+          <div id="right-group">
+            <script>
+              generateRightHeaderGroup(
+                "right-group",
+                "../auth/login.html",
+                "../auth/signup.html"
+              );
+            </script>
+          </div>
+        </span>
+      </header>
+
+      <section class="main-section">
+        <form class="auth-form">
+          <input type="text" id="name-input" placeholder="name" />
+          <input type="password" id="pwd-input" placeholder="password" />
+
+          <button type="button" id="login-btn">Log in</button>
+        </form>
+      </section>
+    </div>
+
+    <footer class="nav-bar">
+      <h6>2021 Cinematheque</h6>
+      <p id="#dev-info" class="footer-item"></p>
+    </footer>
+
+    <script>
+      const btn = document.getElementById("login-btn");
+      btn.addEventListener("click", loginHandler);
+
+      const nameInput = document.getElementById("name-input");
+
+      nameInput.addEventListener("mouseover", {
+        handleEvent: function (e) {
+          console.log(e.currentTarget);
+
+          nameInput.removeEventListener("mouseover", this);
+        },
+      });
+
+      const pwdInput = document.getElementById("pwd-input");
+      pwdInput.addEventListener("focus", (e) => {
+        console.log("First handler ", e.currentTarget);
+      });
+      pwdInput.addEventListener("focus", (e) => {
+        console.log("Second handler", e.currentTarget);
+      });
+    </script>
+  </body>
+</html>

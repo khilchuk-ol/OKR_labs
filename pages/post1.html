@@ -33,8 +33,13 @@
           </h3>
 
           <div id="right-group">
-            <button class="rounded-btn lighter-btn">Log in</button>
-            <button class="rounded-btn darker-btn">Sign up</button>
+            <script>
+              generateRightHeaderGroup(
+                "right-group",
+                "./auth/login.html",
+                "./auth/signup.html"
+              );
+            </script>
           </div>
 
         </span>

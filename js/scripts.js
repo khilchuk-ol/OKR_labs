@@ -65,3 +65,26 @@ const addSpinner = () => {
 
   document.getElementById("placeholder").replaceWith(element);
 };
+
+const generateRightHeaderGroup = (id, loginPageAddress, signupPageAddress) => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  const container = document.getElementById(id);
+
+  if (!user) {
+    container.innerHTML = `
+            <button
+              class="rounded-btn lighter-btn"
+              onclick="location.assign('${loginPageAddress}')"
+            >
+              Log in
+            </button>
+            <button
+              class="rounded-btn darker-btn"
+              onclick="location.assign('${signupPageAddress}')"
+            >
+              Sign up
+            </button>`;
+  } else {
+    container.innerHTML = `Hello, ${user.name}`;
+  }
+};

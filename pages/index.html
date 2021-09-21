@@ -10,6 +10,17 @@
     <link rel="stylesheet" href="../styles/main.css" />
 
     <script src="../js/scripts.js"></script>
+    <script src="../js/menu.js"></script>
+    <script>
+      const liClickHandler = (e) => {
+        console.log(e);
+        if (e.target.style.backgroundColor === "rgb(133, 133, 173)") {
+          e.target.style.backgroundColor = "inherit";
+        } else {
+          e.target.style.backgroundColor = "rgb(133, 133, 173)";
+        }
+      };
+    </script>
   </head>
   <body>
     <div>
@@ -28,9 +39,16 @@
             <a href="genres.html">Genres</a>
           </h3>
 
+          <div id="menu" style="overflow: auto"></div>
+
           <div id="right-group">
-            <button class="rounded-btn lighter-btn">Log in</button>
-            <button class="rounded-btn darker-btn">Sign up</button>
+            <script>
+              generateRightHeaderGroup(
+                "right-group",
+                "./auth/login.html",
+                "./auth/signup.html"
+              );
+            </script>
           </div>
         </span>
       </header>
@@ -121,7 +139,7 @@
             cinematography techniques and terms include:
           </p>
 
-          <ol>
+          <ol id="list">
             <li>
               Close-up: a shot that closely crops in on a character’s face or on
               an object.
@@ -172,6 +190,19 @@
       makeAllParagraphsItalic();
 
       logInfo("dev-info");
+
+      const list = document.getElementById("list");
+      list.addEventListener("click", liClickHandler);
+
+      const header = document.getElementsByTagName("header")[0];
+      console.log(header);
+      header.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+
+        generateMenu("menu", () => {
+          document.getElementById("menu").innerHTML = "";
+        });
+      });
     </script>
   </body>
 </html>
