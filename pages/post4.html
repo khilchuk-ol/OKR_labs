@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thimothée Chalamet drag'n'drop - Cinemablog</title>
+    <meta name="author" content="Khilchuk O." />
+    <meta name="description" content="Official Cinematheque Blog" />
+    <meta name="keywords" content="films, blog, cinematheque" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/main.css" />
+
+    <script src="../js/scripts.js"></script>
+
+    <script></script>
+  </head>
+  <body>
+    <div style="min-height: calc(100vh - 70px)">
+      <header>
+        <span class="nav-bar">
+          <h2 id="big-logo">
+            <a href="index.html">Cinematheque blog</a>
+          </h2>
+          <h3 class="btn-small">
+            <a href="films.html">Films</a>
+          </h3>
+          <h3 class="btn-small">
+            <a href="directors.html">Directors</a>
+          </h3>
+          <h3 class="btn-small">
+            <a href="genres.html">Genres</a>
+          </h3>
+
+          <div id="right-group">
+            <script>
+              generateRightHeaderGroup(
+                "right-group",
+                "./auth/login.html",
+                "./auth/signup.html"
+              );
+            </script>
+          </div>
+        </span>
+      </header>
+
+      <section class="main-section">
+        <div>
+          <h3>Thimothée Chalamet drag'n'drop</h3>
+
+          <div
+            style="
+              background-image: url('../imgs/background/red_carpet.jpg');
+              background-size: 1050px;
+              min-height: 700px;
+            "
+          >
+            <img
+              src="../imgs/films/t_chalamet.jpg"
+              style="height: 350px"
+              id="figure"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="nav-bar">
+      <h6>2021 Cinematheque</h6>
+      <p id="#dev-info" class="footer-item"></p>
+    </footer>
+
+    <script>
+      const figure = document.getElementById("figure");
+
+      figure.onmousedown = function (event) {
+        let shiftX = event.clientX - figure.getBoundingClientRect().left;
+        let shiftY = event.clientY - figure.getBoundingClientRect().top;
+
+        figure.style.position = "absolute";
+        figure.style.zIndex = 1000;
+        document.body.append(figure);
+
+        moveAt(event.pageX, event.pageY);
+
+        function moveAt(pageX, pageY) {
+          figure.style.left = pageX - shiftX + "px";
+          figure.style.top = pageY - shiftY + "px";
+        }
+
+        function onMouseMove(event) {
+          moveAt(event.pageX, event.pageY);
+        }
+
+        // move the ball on mousemove
+        document.addEventListener("mousemove", onMouseMove);
+
+        // drop the ball, remove unneeded handlers
+        figure.onmouseup = function () {
+          document.removeEventListener("mousemove", onMouseMove);
+          figure.onmouseup = null;
+        };
+      };
+
+      figure.ondragstart = function () {
+        return false;
+      };
+    </script>
+  </body>
+</html>

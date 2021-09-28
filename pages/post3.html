@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>'Dune' photo gallery - Cinemablog</title>
+    <meta name="author" content="Khilchuk O." />
+    <meta name="description" content="Official Cinematheque Blog" />
+    <meta name="keywords" content="films, blog, cinematheque" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/main.css" />
+
+    <script src="../js/scripts.js"></script>
+
+    <script>
+      function mouseOverHandler(event) {
+        console.log("Target: ", event.target);
+        console.log("Related target: ", event.relatedTarget);
+
+        event.target.style.filter = "brightness(150%)";
+        event.relatedTarget.style.filter = "none";
+        event.relatedTarget.style.outline = "solid";
+      }
+
+      function mouseOutHandler(event) {
+        console.log("Target: ", event.target);
+        console.log("Related target: ", event.relatedTarget);
+
+        event.target.style.filter = "brightness(100%)";
+        event.relatedTarget.style.filter = "none";
+        event.relatedTarget.style.outline = "none";
+      }
+
+      function bigImg(x) {
+        x.style.height = `${x.height * 1.2}px`;
+      }
+
+      function normalImg(x) {
+        x.style.height = `${x.height * 0.8353}px`;
+      }
+    </script>
+  </head>
+  <body>
+    <div style="min-height: calc(100vh - 70px)">
+      <header>
+        <span class="nav-bar">
+          <h2 id="big-logo">
+            <a href="index.html">Cinematheque blog</a>
+          </h2>
+          <h3 class="btn-small">
+            <a href="films.html">Films</a>
+          </h3>
+          <h3 class="btn-small">
+            <a href="directors.html">Directors</a>
+          </h3>
+          <h3 class="btn-small">
+            <a href="genres.html">Genres</a>
+          </h3>
+
+          <div id="right-group">
+            <script>
+              generateRightHeaderGroup(
+                "right-group",
+                "./auth/login.html",
+                "./auth/signup.html"
+              );
+            </script>
+          </div>
+        </span>
+      </header>
+
+      <section class="main-section">
+        <div>
+          <h3>'Dune' photo gallery</h3>
+
+          <span
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+              align-items: center;
+            "
+          >
+            <div>
+              <img
+                style="height: 350px"
+                src="../imgs/films/dune_poster.jpg"
+                alt="''Dune' 2021 poster"
+                onmouseover="bigImg(this)"
+                onmouseout="normalImg(this)"
+              />
+            </div>
+            <div>
+              <img
+                style="height: 350px"
+                src="../imgs/films/Dune-2020-002.jpg"
+                alt="''Dune' 2021 screenshot 1"
+                onmouseover="bigImg(this)"
+                onmouseout="normalImg(this)"
+              />
+            </div>
+            <div>
+              <img
+                style="height: 350px"
+                src="../imgs/films/dune-movie-review-2021.jpeg"
+                alt="''Dune' 2021 screenshot 2"
+                onmouseover="bigImg(this)"
+                onmouseout="normalImg(this)"
+              />
+            </div>
+          </span>
+        </div>
+      </section>
+    </div>
+
+    <footer class="nav-bar">
+      <h6>2021 Cinematheque</h6>
+      <p id="#dev-info" class="footer-item"></p>
+    </footer>
+
+    <script>
+      const elems = document.getElementsByTagName("img");
+      for (let elem of elems) {
+        elem.addEventListener("mouseover", mouseOverHandler);
+        elem.addEventListener("mouseout", mouseOutHandler);
+      }
+    </script>
+  </body>
+</html>
